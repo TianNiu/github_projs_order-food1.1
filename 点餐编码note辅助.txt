@@ -1,0 +1,30 @@
+【购物车构成：订单条目+底部常驻bar】
+
+##订单条目：菜名  加减器  单价
+     加减器：- 1 +
+##底部常驻bar
+
+假设用户点击的菜名已经存在，
+用户之前选择了三个不同的菜 菜1 菜2 菜3
+ 此时用户 点击 菜3
+
+ 数组 car_item_name=[菜1 菜2 菜3]
+
+ 假设用户按顺序点击
+ 现在 底部购物车是
+               菜3  2
+               菜2  1
+               菜1  0
+此时nameIsIn=2       car_item_name.length=3
+使用jquery 获取的是段落中的第 3-2 项  length-nameIsIn
+
+
+"<li><span class='iteminfo_foodname'>"+变量-菜名+
+"</span><span class='iteminfo_minus'>-</span><span class='iteminfo_num'>1</span>"+
+"<span class='iteminfo_plus'>+</span>￥<span class='iteminfo_foodprice'>"+变量-价格+
+"</span><a href='#'>删除</a></li>"
+
+var new_order_li="<li><span class='iteminfo_foodname'>"+变量-菜名+
+"</span><span class='iteminfo_minus'>-</span><span class='iteminfo_num'>1</span>"+
+"<span class='iteminfo_plus'>+</span>￥<span class='iteminfo_foodprice'>"+变量-价格+
+"</span><a href='#'>删除</a></li>"
